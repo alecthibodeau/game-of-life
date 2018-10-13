@@ -25,10 +25,11 @@ it('board length equals each element length. (board is a square.)', () => {
 });
 
 // Test that the only values in each board element are 0 or 1
+// NOTE: This isn't working yet, because we need to determine how to test for 1 or 2 in 'set' 
 it('only 0 or 1 in array', () => {
   let set
   for (let i = 0; i < index.board.length; i++) {
     set = new Set(index.board[i])
-    assert.equal(set.size, 1) || assert.equal(set.size, 2)
+    (assert.equal(set.size, 1)) || (assert.equal(set.size, 2))
   }
 });
